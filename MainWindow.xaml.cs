@@ -511,7 +511,7 @@ namespace KyoshinQuickly
             var tbox2_Name = new TextBlock();
             tbox2_Name.Name = $"P{id}_Name";
             tbox2_Name.Margin = new Thickness(155, 5, 0, 0);
-            tbox2_Name.FontFamily = new FontFamily("Noto Sans CJK JP Bold");
+            tbox2_Name.FontFamily = new FontFamily(new Uri("pack://application:,,,/"), "./Fonts/#Noto Sans CJK JP Bold");
             tbox2_Name.Text = "";
             tbox2_Name.Style = (Style)(this.Resources["Theme"]);
             tbox2_Name.FontSize = 30;
@@ -524,7 +524,7 @@ namespace KyoshinQuickly
 
             var tbox4_Number = new TextBlock();
             tbox4_Number.Name = $"P{id}_Shindo";
-            tbox4_Number.FontFamily = new FontFamily("Noto Sans CJK JP Bold");
+            tbox4_Number.FontFamily = new FontFamily(new Uri("pack://application:,,,/"), "./Fonts/#Noto Sans CJK JP Bold");
             tbox4_Number.Text = "";
             tbox4_Number.Margin = new Thickness(180, 52, 0, 0);
             tbox4_Number.Style = (Style)(this.Resources["Theme"]);
