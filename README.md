@@ -6,4 +6,5 @@ KyoshinQuicklyは、複数の強震モニタ観測点のリアルタイム震度
 **[防災科学技術研究所](https://www.bosai.go.jp/)** 様 (強震モニタ)
 ## ビルド方法
 ・Visual Studio 2022
+<br>
 ・.NET 6
