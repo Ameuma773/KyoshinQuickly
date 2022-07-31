@@ -42,7 +42,7 @@
                 <TextBlock HorizontalAlignment="Right" Margin="0,0,10,0" Text="強震モニタ観測点リスト" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15"/>
                 <TreeView Name="KyoshinPointList" HorizontalAlignment="Right" Width="180" Margin="0,22,0,0"/>
             </Grid>
-            <Grid Background="White" Name="B2" Visibility="Visible">
+            <Grid Background="White" Name="B2" Visibility="Hidden">
                 <ScrollViewer Margin="0,0,0,0" VerticalAlignment="Top">
                     <Grid Height="550">
                         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="配色の設定 / Color" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25"/>
