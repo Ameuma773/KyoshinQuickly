@@ -1,0 +1,53 @@
+﻿<Window x:Class="KyoshinQuickly.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KyoshinQuickly"
+        mc:Ignorable="d"
+        Title="KyoshinQuickly" Height="450" Width="600" Background="DimGray" FontFamily="/Fonts/#Noto Sans CJK JP Regular" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Window.ContextMenu>
+        <ContextMenu Background="White">
+            <MenuItem Header="設定" Click="MenuItem_Click"/>
+            <Separator/>
+            <MenuItem Header="再起動" Click="MenuItem_Click_2"/>
+            <MenuItem Header="終了" Click="MenuItem_Click_1"/>
+        </ContextMenu>
+    </Window.ContextMenu>
+    <Window.Resources>
+        <Style x:Name="Theme" x:Key="Theme" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource MojiColor}"/>
+        </Style>
+        <SolidColorBrush x:Key="MojiColor" Color="White"/>
+    </Window.Resources>
+    <Grid>
+        <Grid Name="grid" Margin="0,0,0,50">
+            <ScrollViewer VerticalAlignment="Top" VerticalScrollBarVisibility="Auto">
+                <Viewbox Stretch="UniformToFill">
+                    <StackPanel Name="stackpanel">
+                        
+                        <!--<Grid x:Name="Point0" Height="155" Width="600" Margin="5">
+                    <Border BorderBrush="Black" Background="#50000000" BorderThickness="2" CornerRadius="10">
+                        <Grid>
+                            <TextBlock Margin="5,20,0,0" Text="強震モニタ観測点名" FontSize="15" HorizontalAlignment="Left" Style="{DynamicResource Theme}"/>
+                            <TextBlock Margin="155,5,0,0" Text="" FontSize="30" HorizontalAlignment="Left" x:Name="P1_Name" Style="{DynamicResource Theme}" FontFamily="/Fonts/#Noto Sans CJK JP Bold"/>
+                            <TextBlock Margin="5,100,0,0" Text="リアルタイム震度" FontSize="20" HorizontalAlignment="Left" Style="{DynamicResource Theme}"/>
+                            <TextBlock Margin="180,52,0,0" Text="-3.0" FontSize="70" HorizontalAlignment="Left" x:Name="P1_Shindo" FontFamily="/Fonts/#Noto Sans CJK JP Bold" Style="{DynamicResource Theme}"/>
+                            <Line x:Name="P1_Color" Stroke="#0000cd" StrokeThickness="10" X1="5" X2="320" Y1="143" Y2="143"></Line>
+                            <TextBlock Margin="340,100,0,0" Text="気象庁震度階級" FontSize="20" HorizontalAlignment="Left" Style="{DynamicResource Theme}"/>
+                            <TextBlock Text="0" Foreground="White" FontSize="80" TextAlignment="Center" Width="100" Height="100" Margin="5,5" Background="MidnightBlue" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                        </Grid>
+                    </Border>
+                </Grid>-->
+                        
+                    </StackPanel>
+                </Viewbox>
+            </ScrollViewer>
+        </Grid>
+        <Grid Height="50" VerticalAlignment="Bottom">
+            <Border BorderBrush="Black" BorderThickness="2" CornerRadius="10">
+                <TextBlock x:Name="NowTime" Text="0000/00/00 00:00:00" Style="{DynamicResource Theme}" FontSize="30" FontFamily="/Fonts/#Noto Sans CJK JP Bold" TextAlignment="Center"/>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
